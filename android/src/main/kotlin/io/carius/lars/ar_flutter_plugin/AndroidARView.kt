@@ -556,7 +556,9 @@ internal class AndroidARView(
                     .build()
                     .thenAccept { texture: Texture? ->
                         arSceneView.planeRenderer.material.thenAccept { material: Material ->
-                            material.setTexture(PlaneRenderer.MATERIAL_TEXTURE, texture)
+//                            material.setTexture(PlaneRenderer.MATERIAL_TEXTURE, texture)
+//                            material.setFloat(PlaneRenderer.MATERIAL_SPOTLIGHT_RADIUS, 10f)
+                            material.setFloat3(PlaneRenderer.MATERIAL_COLOR, Color(1.0f, 0.0f, 0.0f))  // Red color
                             material.setFloat(PlaneRenderer.MATERIAL_SPOTLIGHT_RADIUS, 10f)
                         }
                     }
